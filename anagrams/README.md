@@ -23,7 +23,12 @@ A bootstrap file or jsfiddle link should exist in this directory for the languag
 
 ### Optional: visualization
 
-Use (TODO MARTIJN library) to produce a self-contained HTML file giving a [histogram](http://en.wikipedia.org/wiki/Histogram) displaying how many anagrams were generated per word. By "self-contained", the numeric data should be contained within the file- it's okay to use `<script>` for libraries.
+Make the anagram checker into a small api. Add an endpoint that takes in a word as query param / post body, and return json.
+The page should display:
+* input field with submit button
+* show a list of results
+* do not remove previous requests, but create a new list on the page. Make sure to display what the input was for that list
+* handle any errors by displaying what went wrong, or there are not result
 
 ## Restrictions
 Use the language specified by your interviewer. Generally you should not use extended libraries/packages. This doesn't mean you need to reinvent the wheel, but sample problems shouldn't need complicated libraries.
@@ -32,7 +37,7 @@ Use the language specified by your interviewer. Generally you should not use ext
 
 * **Java**: reusable components from [Apache Commons](http://commons.apache.org/components.html) are acceptable, as is [GSON](https://code.google.com/p/google-gson/).
 * **Python**: `requests` should be the only nonstandard library needed.
-* **Javascript**: todo
+* **Javascript**: Use any frontend framework you like. (angular / react / jquery)
 
 ## Example
 
