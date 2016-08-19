@@ -23,12 +23,7 @@ A bootstrap file or jsfiddle link should exist in this directory for the languag
 
 ### Optional: visualization
 
-Make the anagram checker into a small api. Add an endpoint that takes in a word as query param / post body, and return json.
-The page should display:
-* input field with submit button
-* show a list of results
-* do not remove previous requests, but create a new list on the page. Make sure to display what the input was for that list
-* handle any errors by displaying what went wrong, or there are not result
+Make the anagram checker into a small api. Add an endpoint that takes in a word as query param / post body, and return json. Then add a frontend in JS to use this API, and display the results.
 
 ## Restrictions
 Use the language specified by your interviewer. Generally you should not use extended libraries/packages. This doesn't mean you need to reinvent the wheel, but sample problems shouldn't need complicated libraries.
