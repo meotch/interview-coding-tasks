@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+# to run:
+# ./starter.py test # run tests
+# ./starter.py test --failfast # any unittest args, including single test
+# ./starter.py test BasicTests.testTypeError # any unittest args, including single test
+# ./starter.py # run the actual main()
+
 import unittest
 import unittest.mock
 import datetime
