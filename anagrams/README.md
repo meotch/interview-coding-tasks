@@ -9,7 +9,11 @@ This problem can also demonstrate effective **unit tests**.
 ## Input
 The input file will be given on stdin and will contain a list of input phrases, one per line.
 
-The dictionary to be used is [the 10,000 most common English words](https://github.com/first20hours/google-10000-english). The size of this list was inspired by [an XKCD comic](https://xkcd.com/1133/); it's nice because you don't have to use a corpus of all words.
+The dictionary to be used is in this directory, it is from [the 10,000 most common English words](https://github.com/first20hours/google-10000-english), which is then scrubbed to only contain actual words:
+
+    comm -12i <(sort /usr/share/dict/words) <(sort google-10000-english-usa.txt) > google-10k-actual-words.txt
+
+That removes the ordering (the top word isn't the most common word anymore), but that doesn't affect the problem. The size of this list was inspired by [an XKCD comic](https://xkcd.com/1133/); it's nice because you don't have to use a corpus of all words.
 
 There's no need to handle case or any non-ascii characters (spaces, punctuation, diacritics); feel free to normalize or assume simple lowercase ascii input. Spaces can be freely added or removed, so "indicatory" has anagrams of "dictionary" and "rant idiocy".
 
