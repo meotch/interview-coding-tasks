@@ -27,7 +27,7 @@ A bootstrap file or jsfiddle link should exist in this directory for the languag
 
 ### Optional: visualization
 
-Make the anagram checker into a small api. Add an endpoint that takes in a word as query param / post body, and return json. Then add a frontend in JS to use this API, and display the results.
+Make the anagram checker into a small api. Add an endpoint that takes in a word as query param / post body, and return json. Then add a frontend in JS to use this API, and display the results.  Libraries other than those listed in the "Extended libraries allowed by language" section below may be used to implement the endpoint.
 
 ## Restrictions
 Use the language specified by your interviewer. Generally you should not use extended libraries/packages. This doesn't mean you need to reinvent the wheel, but sample problems shouldn't need complicated libraries.
@@ -44,6 +44,8 @@ As an example, this command should output anagrams on most platforms, given a di
 
     $ echo "nelson" | ./anagram.py /path/to/dict
     nelson=lens no,lens on
+
+Note: the output of your implementation should be in JSON, see "expected output" section above.
 
 # Source
 Upstream on this is [a version at adhoclabs that tedder created](https://github.com/adhoclabs/interview-code-tests/blob/master/anagrams/README.md), based on [streamtech](http://www.streamtech.nl/problemset/148.html) for the idea.
