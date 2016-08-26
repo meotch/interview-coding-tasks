@@ -45,7 +45,7 @@ As an example, this command should output anagrams on most platforms, given a di
     $ echo "nelson" | ./anagram.py /path/to/dict
     <your json output here: with the following valid anagrams 1. "lens no" 2. "lens on" for the word "nelson">
 
-Note: the output of your implementation should be in JSON, see "expected output" section above.
+Note: the output of your implementation should be in JSON, see [expected output][expected-output] section above.
 
 # Source
 Upstream on this is [a version at adhoclabs that tedder created](https://github.com/adhoclabs/interview-code-tests/blob/master/anagrams/README.md), based on [streamtech](http://www.streamtech.nl/problemset/148.html) for the idea.
