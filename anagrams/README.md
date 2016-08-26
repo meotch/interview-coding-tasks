@@ -9,7 +9,7 @@ This problem can also demonstrate effective **unit tests**.
 ## Input
 The input file will be given on stdin and will contain a list of input phrases, one per line.
 
-[The dictionary to be used is in this directory](https://github.com/stansonhealth/interview-coding-tasks/blob/master/anagrams/google-10k-actual-words.txt), it is adapted from [the 10,000 most common English words](https://github.com/first20hours/google-10000-english), which is then scrubbed to only contain actual words:
+[The dictionary to be used is in this directory](https://github.com/stansonhealth/interview-coding-tasks/blob/master/anagrams/google-10k-actual-words.txt), it is adapted from [the 10,000 most common English words](https://github.com/first20hours/google-10000-english) which has been scrubbed to only contain actual words:
 
     comm -12i <(sort /usr/share/dict/words) <(sort google-10000-english-usa.txt) > google-10k-actual-words.txt
 
