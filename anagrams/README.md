@@ -43,7 +43,7 @@ Use the language specified by your interviewer. Generally you should not use ext
 As an example, this command should output anagrams on most platforms, given a dictionary file:
 
     $ echo "nelson" | ./anagram.py /path/to/dict
-    nelson=lens no,lens on
+    <your json output here: with the following valid anagrams 1. "lens no" 2. "lens on" for the word "nelson">
 
 Note: the output of your implementation should be in JSON, see "expected output" section above.
 
