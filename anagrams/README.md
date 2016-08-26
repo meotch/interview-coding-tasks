@@ -11,7 +11,7 @@ The input file will be given on stdin and will contain a list of input phrases, 
 
 The dictionary to be used is in this directory; it is adapted from [the 10,000 most common English words](https://github.com/first20hours/google-10000-english) which has been scrubbed to only contain actual words:
 
-    comm -12i <(sort /usr/share/dict/words) <(sort google-10000-english-usa.txt) > google-10k-actual-words.txt
+    comm -12i <(tr '[:upper:]' '[:lower:]' < /usr/share/dict/words | sort) <(tr '[:upper:]' '[:lower:]' < google-10000-english-usa.txt | sort) > google-10k-actual-words.txt
 
 That removes the ordering (the top word isn't the most common word anymore), but that doesn't affect the problem. The size of this list was inspired by [an XKCD comic](https://xkcd.com/1133/); it's nice because you don't have to use a corpus of all words.
 
