@@ -16,7 +16,7 @@ The solution is based on a [Trie data structure](https://en.wikipedia.org/wiki/T
 
 There's no need to handle case or any non-ascii characters (spaces, punctuation, diacritics); feel free to normalize or assume simple lowercase ascii input. Spaces can be freely added or removed, so "indicatory" has anagrams of "dictionary" and "rant idiocy".
 
-The dictionary to be used can be found in the dictionary subdirectory and is adapted from [the New General Service Slist](http://www.newgeneralservicelist.org/). 
+The dictionary to be used can be found in the dictionary subdirectory and is adapted from [the New General Service List](http://www.newgeneralservicelist.org/). 
 
 
 ## Development Environment Requirements
@@ -54,4 +54,4 @@ Example run:
 
 
 # License
-As with all content and code included in this repository, it is licensed under CC-BY (content) and the MIT license found in the root of this repository.
+As with all content and code included in this repository, it is licensed under CC-BY (content) and the MIT license found in the root of this repository. The New General Service List is licensed under [Creative Commons](http://creativecommons.org/licenses/by-sa/4.0/)
