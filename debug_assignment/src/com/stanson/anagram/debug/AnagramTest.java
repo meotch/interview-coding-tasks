@@ -8,9 +8,13 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 /**
- * Boilerplate - TODO please change all documentation
+ * <pre>
+ * Tests
+ * 1. testAdd - Adding words to Trie
+ * 2. testFindAnagramBoundary - Finding anagram boundaries in Trie
  *
- * Created by yourname on date
+ * Created by Mitchell Williams on 4/1/17
+ * </pre>
  */
 public class AnagramTest {
 
@@ -37,42 +41,64 @@ public class AnagramTest {
 
         Anagram testObject = new Anagram();
 
-        // First some bounds testing
+        try {
+        	testObject.add("Two words");
+        	fail("Spaces should cause an exception");
+        } catch (Exception e) {
+        }
+        //addNull bounds test
         try {
             testObject.add(null);
             fail("Null should cause an exception");
         } catch (Exception e) {
 
         }
+        //addBlank bounds test
         try {
             testObject.add("");
             fail ("Blank should cause an exception");
         } catch (Exception e) {
         }
+        //addAlpha bounds test
         try {
             testObject.add("fasfkKKKJ3KJDLK");
             fail("Non alpha should cause an exception");
         } catch (Exception e) {
         }
-
+        //addWords bounds test
+        try {
+        	testObject.add("Two words");
+        	fail("Spaces should cause an exception");
+        } catch (Exception e) {
+        }
+        
         // Simple word
         testObject.add("a");
         // long word
         testObject.add("alfkdjaolfiejwoqirejlikjfalkdjlksdjflkasjflkdsajflkdasjfldksaj");
+        // UpperCase word
+        testObject.add("ALLCAPSALLTHETIME");
     }
 
     /**
-     * Test boundaries of FindAnagrams
+     * Test boundaries of findAnagrams()
      *
      * @throws Exception Any exception causes the test to fail
      */
     @Test
     public void testFindAnagramsBoundary() throws Exception {
 
+    	//Create Trie and load w/ words
         Anagram testObject = new Anagram();
+        
+        testObject.add("meow");
+        testObject.add("me");
         testObject.add("lens");
         testObject.add("no");
         testObject.add("on");
+        testObject.add("fighter");
+        testObject.add("all");
+        testObject.add("a");
 
         try {
             testObject.findAnagrams(null);
@@ -91,11 +117,12 @@ public class AnagramTest {
             fail("Non alpha should cause an exception");
         } catch (Exception e) {
         }
-
-        assertTrue(testObject.findAnagrams("a").size() == 0);
+        
+        assertTrue(testObject.findAnagrams("me").size() == 1);//Validates adding a valid subword of an already existant branch in Trie works
+        assertTrue(testObject.findAnagrams("al").size() == 0);//Validates that random char combos as valid Trie traversal combos are NOT anagrams
+        assertTrue(testObject.findAnagrams("fight").size() == 0);//Validates that only explicitly added words can be used as anagrams
+        assertTrue(testObject.findAnagrams("aaallllll").size() == 1);//Validates order of phrase doesn't matter AND same word can be used multiple times
+        assertTrue(testObject.findAnagrams("a").size() == 1);//Validates subTrie branches ie "a" in "a"-"l"-"l" is a valid 
+        assertTrue(testObject.findAnagrams("nelson").size() == 4);//Validates Permutations of anagrams work
     }
-
-
-    // TODO add test cases
-
 }
